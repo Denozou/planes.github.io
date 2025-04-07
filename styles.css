@@ -406,27 +406,27 @@ nav {
     font-size: 1rem;
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: flex-start;
+.terms-container {
     margin-bottom: 20px;
-    flex-wrap: nowrap;
+}
+
+.terms-wrapper {
+    display: inline-block;
+    text-align: left;
     width: 100%;
 }
 
-.checkbox-group input[type="checkbox"] {
+.terms-wrapper input[type="checkbox"] {
+    vertical-align: middle;
     margin-right: 10px;
-    width: auto;
     cursor: pointer;
-    flex-shrink: 0;
-    margin-top: 4px; /* Align with first line of text */
 }
 
-.checkbox-group label {
-    margin-bottom: 0;
+.terms-wrapper label {
+    display: inline;
+    vertical-align: middle;
     cursor: pointer;
-    flex: 1;
-    text-align: left;
+    margin-bottom: 0;
 }
 
 /* Footer */
