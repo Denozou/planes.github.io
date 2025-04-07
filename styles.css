@@ -408,19 +408,25 @@ nav {
 
 .checkbox-group {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .checkbox-group input[type="checkbox"] {
     margin-right: 10px;
     width: auto;
     cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 4px; /* Align with first line of text */
 }
 
 .checkbox-group label {
     margin-bottom: 0;
     cursor: pointer;
+    flex: 1;
+    text-align: left;
 }
 
 /* Footer */
