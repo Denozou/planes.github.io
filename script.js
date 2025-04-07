@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
+            const termsAccepted = document.getElementById('terms-checkbox').checked;
             
             // Simple validation
             if (!name || !email || !message) {
@@ -75,7 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission (in a real application, you would send data to a server)
+            // Check if terms are accepted
+            if (!termsAccepted) {
+                showNotification('Proszę zaakceptować warunki korzystania z serwisu.', 'error');
+                return;
+            }
+            
+            // Show alert message
+            alert(`Dziękujemy za wiadomość, ${name}! Twoja wiadomość została wysłana.`);
+            
+            // Also show notification
             showNotification('Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe.', 'success');
             
             // Reset form
